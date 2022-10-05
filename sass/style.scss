@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noticia+Text&family=PT+Serif&family=Roboto&family=Yeseva+One&display=swap');
+
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: "chunkfive";
+    src: url('chunkfive.woff2');
+    src: local('chunkfive.woff2');
+    src: url('chunkfive.woff2') format('woff2');
+}
+
+main {
+    background: #1d1b21;
+    color: #9C9C9C;
+    h1 {
+        // font-family: 'Montserrat';
+        // font-weight: 700;
+    }
+}
+p {
+    font-size: 16px;
+}
+
+.font{
+    &-chunk {
+        font-family: 'chunkfive';
+    }
+    &-big {
+        font-size: 42px;
+    }
+}
+
+.banner{
+    &__title {
+        background: red;
+        width: fit-content;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        padding: 8px 16px;
+        position: relative;
+        &::before{
+            // position: absolute;
+            // content: '';
+            // left: 8px;
+            // right: -8px;
+            // top: 8px;
+            // bottom: -8px;
+            // z-index: 1;
+            // background-color: red;
+        }
+        h1 {
+            color: black;
+            position: relative;
+            font-size: 60px;
+        }
+        .totop {
+            // position: absolute;
+            // left: 0;
+            // right: 0;
+            // top: 0;
+            // bottom: 0;
+            // z-index: 9;
+            background: red;
+        }
+    }
+}
+
+.wrap-detik {
+    width: 660px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    p {
+        font-family: 'Montserrat';
+    }
+  
+    @media screen and (max-width: 766px) {
+      width: auto;
+      margin: 0 8px;
+    }
+  }
+  
+
+section,main {
+    overflow-x: hidden;
+}
+
+.section {
+    .card {
+        background: transparent !important;
+        .image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            display: block;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .name {
+            font-size: 21px;
+            text-align: center;
+            margin: 16px 0;
+            font-family: 'Montserrat';
+            font-weight: 700;
+        }
+    }
+}
+
+.color-white {
+    color: white;
+}
+
+
+.color{
+    &-red {
+        color: red;
+    }
+}
+
+.daftar {
+    .image {
+        width: 150px;
+        height: auto;
+        &.rotateY {
+            transform: rotateY(180deg);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    .all-paket{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        height: auto;
+        text-align: center;
+        .paket {
+            // display: inline-block;
+            // width: 45%;
+            text-align: left;
+            position: relative;
+            .icon-tragedi {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+    
+}
+

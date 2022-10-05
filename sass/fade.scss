@@ -1,0 +1,627 @@
+
+.first {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background: -webkit-gradient(linear, left top, left bottom, from(#46797f), to(#efc086));
+    h1 {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 68px;
+        @media screen and (max-width:766px) {
+            font-size: 52px;
+        }
+    }
+    &__cover {
+        position: absolute;
+        @media screen and (min-width:1440px){
+            bottom: 0;
+        }
+        bottom: 5%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        @media screen and (max-width:766px) {
+            bottom: 12%;
+            border: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+   // Wave Animation
+    @keyframes move_wave {
+        0% {
+            transform: translateX(0) translateZ(0) scaleY(1)
+        }
+        50% {
+            transform: translateX(-25%) translateZ(0) scaleY(0.95)
+        }
+        100% {
+            transform: translateX(-50%) translateZ(0) scaleY(1)
+        }
+    }
+    &__wave {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        // right: 0;
+        width: 200%;
+        height: 100%;
+        background-repeat: repeat no-repeat;
+        background-position: 0 bottom;
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        &.one {
+            z-index: 9;
+            animation: move_wave 20s linear infinite;
+            background-image: url('../img/cover-wave-1.png');
+        }
+        &.two {
+            z-index: 8;
+            animation: move_wave 18s linear infinite;
+            background-image: url('../img/cover-wave-2.png');
+        }
+        &.three {
+            z-index: 7;
+            animation: move_wave 15s linear infinite;
+            background-image: url('../img/cover-wave-3.png');
+        }
+        &.four {
+            z-index: 6;
+            animation: move_wave 14s linear infinite;
+            background-image: url('../img/cover-wave-4.png');
+        }
+        &.five {
+            z-index: 5;
+            animation: move_wave 13s linear infinite;
+            background-image: url('../img/cover-wave-5.png');
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__kilang {
+        position: absolute;
+        @media screen and (max-width:766px) {
+            bottom: 9%;
+        }
+        @media screen and (min-width:1440px) {
+            bottom: -4vh;
+        }
+        bottom: 1%;
+        left: 0;
+        z-index: 5;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        &-big {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            bottom: 2%;
+            z-index: 2;
+            @media screen and (min-width:1440px) {
+                bottom: 0;
+            }
+            @media screen and (max-width:766px) {
+                position: absolute;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                bottom: -25%;
+                z-index: 5;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__fire {
+        position: absolute;
+        bottom: 7%;
+        right: 9%;
+        z-index: 1;
+        @media screen and (min-width:1440px) {
+            // bottom: 12%;
+            right: 8.5%;
+            bottom: 5%;
+        }
+        @media screen and (max-width:766px) {
+            position: absolute;
+            bottom: 14.5%;
+            right: 8.5%;
+            z-index: 1;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    @keyframes MoveUpDown {
+        0%, 100% {
+          bottom: -5%;
+        }
+        50% {
+          bottom: -2%;
+        }
+      }
+
+      @keyframes MoveUpDownMob {
+        0%, 100% {
+          bottom: 9%;
+        }
+        50% {
+          bottom: 10%;
+        }
+      }
+    &__perahu {
+        animation: MoveUpDown 2.5s linear infinite;
+        position: absolute;
+        bottom: -5%;
+        left: 15%;
+        z-index: 7;
+        @media screen and (max-width:766px) {
+            animation: MoveUpDownMob 2.5s linear infinite;
+            position: absolute;
+            bottom: 9%;
+            left: 22%;
+            width: 100%;
+            z-index: 7;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .barengan {
+        // position: relative;
+        // height: 100vh;
+        @media screen and (max-width:766px) {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 3%;
+        }
+    }
+    .rumput {
+        position: absolute;
+        bottom: 12%;
+        left: 0;
+        right: 0;
+    }
+}
+
+.second {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #4a7f80,#b0aa7e);
+    p {
+        @media screen and (max-width:766px) {
+            font-size: 16px;
+        }
+    }
+    &__bangunan {
+        position: relative;
+        height: 100vh;
+        .rumput {
+            position: absolute;
+            bottom: 12%;
+            left: 0;
+            right: 0;
+            @media screen and (max-width:766px) {
+                bottom: 0%;
+            }
+        }
+        .citys {
+            height: auto;
+            width: 100%;
+            position: absolute;
+            bottom: 10%;
+            @media screen and (max-width:766px) {
+                height: 100%;
+                bottom: 0%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @media screen and (max-width:766px) {
+                    object-fit: cover;
+                }
+            }
+        }
+        .train {
+            position: absolute;
+            bottom: 4%;
+            @media screen and (max-width:766px) {
+                position: absolute;
+                bottom: 0%;
+                right: -20%;
+                width: 100%;
+                height: 100%;
+                z-index: 9;
+                left: 0;
+                right: 0;
+            }
+            img {
+                @media screen and (max-width:766px) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            @media screen and (min-width:1440px) {
+                right: 10%;   
+                bottom: 10%; 
+            }
+            right: -20%;
+        }
+        @-webkit-keyframes run {
+            0% {
+                right: 0;
+            }
+            50% {
+                right: 2%;
+            }
+            100% {
+                right: 0;    
+            }
+        }
+        .awan {
+            position: absolute;
+            bottom: 0%;
+            animation: run 3.5s linear infinite;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @media screen and (max-width:766px) {
+                    object-fit: cover;
+                }
+            }
+            @media screen and (min-width:1440px) {
+                bottom: 15%;
+            }
+
+        }
+        .awan2 {
+            position: absolute;
+            bottom: 18%;
+            animation: run 4.5s linear infinite;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @media screen and (max-width:766px) {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.third {
+    background: linear-gradient(to bottom, #233f40, #6a5c3e);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    .color-white {
+        color: white;
+    }
+    &__bangunan {
+        position: relative;
+        height: 100vh;
+        .citys {
+            height: auto;
+            width: 100%;
+            position: absolute;
+            bottom: 10%;
+            @media screen and (max-width:766px) {
+                height: 100%;
+                bottom: 0%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @media screen and (max-width:766px) {
+                    object-fit: cover;
+                }
+            }
+        }
+        .train {
+            position: absolute;
+            bottom: 4%;
+            @media screen and (max-width:766px) {
+                position: absolute;
+                bottom: 0%;
+                right: -20%;
+                width: 100%;
+                height: 100%;
+                z-index: 9;
+                left: 0;
+                right: 0;
+            }
+            img {
+                @media screen and (max-width:766px) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            @media screen and (min-width:1440px) {
+                right: 10%;   
+                bottom: 10%; 
+            }
+            right: -20%;
+        }
+        @-webkit-keyframes run {
+            0% {
+                right: 0;
+            }
+            50% {
+                right: 2%;
+            }
+            100% {
+                right: 0;    
+            }
+        }
+        .bulan {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            @media screen and (max-width:766px) {
+                top: -40%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .rumput {
+        position: absolute;
+        bottom: 12%;
+        left: 0;
+        right: 0;
+        @media screen and (max-width:766px) {
+            // height: 100%;
+            bottom: 0%;
+        }
+    }
+}
+
+main {
+    p {
+        @media screen and (max-width:766px) {
+            font-size: 16px;
+        }
+    }
+}
+
+
+.four {
+    background: linear-gradient(to bottom, #233f40, #6a5c3e);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .helping {
+        position: absolute;
+        right: 10%;
+        width: 40vw;
+        top: 5%;
+        p {
+            color: white;
+        }
+    }
+    .image-gedung {
+        position: absolute;
+        left: 0;
+        // width: 100%;
+        // height: 100%;
+        bottom: 0;
+        top: 0;
+        z-index: 7;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
+        }
+    }
+    .image-mobil-1 {
+        position: absolute;
+        left: 0;
+        // width: 100%;
+        // height: 100%;
+        bottom: 0;
+        top: 0;
+        z-index: 4;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
+        }
+    }
+    .image-mobil-2 {
+        position: absolute;
+        left: 10%;
+        // width: 100%;
+        // height: 100%;
+        bottom: 0;
+        top: 0;
+        z-index: 5;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
+        }
+    }
+    .image-jalan {
+        position: absolute;
+        right: 0;
+        // width: 100%;
+        // height: 100%;
+        bottom: 0;
+        top: 0;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.five {
+    background: linear-gradient(to bottom, #4a7f80,#b0aa7e);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .helping {
+        p {
+            color: white;
+            padding-top: 16px;
+        }
+    }
+    &__first,&__second,&__third,&__four,&__five,&__six,&__seven {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 6;
+        @media screen and (max-width:766px) {
+            height: initial;
+            top: initial;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @media screen and(max-width:766px){
+                object-fit: contain;
+            }
+        }
+    }
+    &__seven {
+        z-index: 2;
+    }
+}
+
+.opt-absolute {
+    @media screen and (max-width:766px) {
+        position: absolute;    
+    }
+}
+
+
+.color {
+    &-white {
+        color: white;
+    }
+}
+
+#fullpage {
+	.section {
+		// h1 {
+		// 	text-align: center;
+		// 	color: white;
+		// 	font-size: 3.5em;
+		// 	text-transform: uppercase;
+		// }
+		
+		// h2 {
+		// 	text-align: center;
+		// 	color: white;
+		// 	font-size: 2.5em;
+		// }
+	}
+}
+
+.fullpage-wrapper {
+	width: 100%!important;
+	transform: none!important;
+	
+	.fp-section {
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			z-index: 1;
+		}
+		
+		width: 100%!important;
+		position: absolute;
+		left: 0;
+		top: 0;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 0;
+		transition: all .7s ease-in-out;
+		
+		.fp-slidesContainer {
+			width: 100%!important;
+			transform: none!important;
+			
+			.fp-slide {
+				&.active {
+					visibility: visible;
+					opacity: 1;
+					z-index: 1;
+				}
+				
+				width: 100%!important;
+				position: absolute;
+				left: 0;
+				top: 0;
+				visibility: hidden;
+				opacity: 0;
+				z-index: 0;
+				transition: all .7s ease-in-out;
+			}
+		}
+	}
+}
