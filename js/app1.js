@@ -15,10 +15,10 @@
                 }
                 
                 else if( ( index == 1 || index == 2 ) && nextIndex == 3 ) {
-                  $isAnimatedSecond.eq(0).addClass('animate__animated animate__fadeInRight').attr("data-wow-delay","2.5s"); 
-                  $isAnimatedSecond.eq(1).addClass('animate__animated animate__fadeInLeft').attr("data-wow-delay","3.5s"); 
-                  $isAnimatedSecond.eq(2).addClass('animate__animated animate__fadeInRight').attr("data-wow-delay","2.5s"); 
-                  $isAnimatedSecond.eq(3).addClass('animate__animated animate__fadeInLeft').attr("data-wow-delay","3.5s"); 
+                  $isAnimatedSecond.eq(0).addClass('animate__animated animate__fadeInRight animate__delay-1s	1s').attr("data-wow-delay","2.5s"); 
+                  $isAnimatedSecond.eq(1).addClass('animate__animated animate__fadeInLeft animate__delay-1s	1s').attr("data-wow-delay","3.5s"); 
+                  $isAnimatedSecond.eq(2).addClass('animate__animated animate__fadeInRight animate__delay-2s	2s').attr("data-wow-delay","2.5s"); 
+                  $isAnimatedSecond.eq(3).addClass('animate__animated animate__fadeInLeft animate__delay-2s	2s').attr("data-wow-delay","3.5s"); 
                     // $isAnimatedThird.addClass('animate__animated animate__fadeInLeft animate__repeat-2	2').attr("data-wow-delay","2.5s"); 
                     // $isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
                     // $isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
