@@ -4,6 +4,7 @@
       var $isAnimatedSecond = $('.pemicu .is-animated');
       var $isAnimatedOne = $('.one .is-animated');
       var $isAnimatedDaftar = $('.daftar .is-animated');
+      var $isAnimatedDaftar2 = $('.daftar2 .is-animated');
         $('#fullpage').fullpage({
           onLeave: function(index,nextIndex, direction){
             // animate__animated animate__fadeIn" data-wow-delay="0.5s"
@@ -37,14 +38,17 @@
                   $isAnimatedDaftar.eq(4).addClass('animate__animated animate__fadeInRight animate__delay-3s	3s');
                   $isAnimatedDaftar.eq(5).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
                   $isAnimatedDaftar.eq(6).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
-                  
-                    // $isAnimatedFour.eq(0).addClass('animate__animated animate__fadeInRight').attr("data-wow-delay","2.5s");
-                    // $isAnimatedFour.eq(1).addClass('animate__animated animate__fadeInLeft').attr("data-wow-delay","3.8s");;
-                    // $isAnimatedFourth.addClass('animated zoomIn').css('animation-delay', '.6s');
-                    // $isAnimatedFourthSingle.addClass('animated lightSpeedIn').css('animation-delay', '1.2s');
-                    // $isAnimatedFourthSingle.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-                    // $(this).removeClass('lightSpeedIn').addClass('zoomOutDown');
-                    // });
+                }
+
+                // third animation
+                else if( ( index == 1 || index == 2 || index == 3 || index == 4 ) && nextIndex == 5 ) {
+                  $isAnimatedDaftar2.eq(0).addClass('animate__animated animate__fadeIn animate__delay-1s	1s');
+                  $isAnimatedDaftar2.eq(1).addClass('animate__animated animate__fadeInLeft animate__delay-2s	2s');
+                  $isAnimatedDaftar2.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-2s	2s');
+                  $isAnimatedDaftar2.eq(3).addClass('animate__animated animate__fadeInRight animate__delay-3s	3s');
+                  $isAnimatedDaftar2.eq(4).addClass('animate__animated animate__fadeInRight animate__delay-3s	3s');
+                  $isAnimatedDaftar2.eq(5).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
+                  $isAnimatedDaftar2.eq(6).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
                 }
         },
           navigation: false,
