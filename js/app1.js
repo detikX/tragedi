@@ -47,7 +47,7 @@
                     // });
                 }
         },
-          navigation: true,
+          navigation: false,
           autoScrolling: true,
           navigationPosition: 'right',
           scrollOverflow: true,
