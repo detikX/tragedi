@@ -35,8 +35,15 @@ p {
     .wrap-detik{
         padding: 24px;
         background: rgba($color: #1d1b21, $alpha: .8);
+        @media screen and (max-width:766px) {
+            padding: 16px 4px;
+            // background: transparent;
+        }
         p {
             // color: white;
+            @media screen and(max-width:766px) {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -117,10 +124,18 @@ section,main {
         width: 100%;
         height: auto;
         opacity: .3;
+        @media screen and (max-width:766px) {
+            // display: none;
+            height: 100%;
+        }
         img {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @media screen and (max-width:766px) {
+                // display: none;
+                object-fit: cover;
+            }
         }
     }
     .card {
