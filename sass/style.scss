@@ -33,9 +33,10 @@ p {
 }
 .font-big{
     @media screen and(max-width:766px) {
-        font-size: 32px !important;
+        font-size: 24px !important;
     }
 }
+
 .one {
     .wrap-detik{
         padding: 24px;
@@ -121,13 +122,13 @@ section,main {
     z-index: 55;
 }
 .section {
-    // position: relative;
+    position: relative;
     &__help {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 100vh;
         opacity: .3;
         @media screen and (max-width:766px) {
             // display: none;
@@ -136,7 +137,7 @@ section,main {
         img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             @media screen and (max-width:766px) {
                 // display: none;
                 object-fit: cover;
@@ -223,3 +224,17 @@ section,main {
     
 }
 
+.daftar2 {
+    .section__help {
+        .image {
+            @media screen and (max-width:766px) {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .wrap-detik {
+        background: rgba($color: #000000, $alpha: .8);
+        padding: 24px 16px;
+    }
+}
