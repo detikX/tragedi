@@ -5,6 +5,7 @@
       var $isAnimatedOne = $('.one .is-animated');
       var $isAnimatedDaftar = $('.daftar .is-animated');
       var $isAnimatedDaftar2 = $('.daftar2 .is-animated');
+      var $isAnimatedDaftar3 = $('.daftar3 .is-animated');
         $('#fullpage').fullpage({
           onLeave: function(index,nextIndex, direction){
             // animate__animated animate__fadeIn" data-wow-delay="0.5s"
@@ -49,6 +50,17 @@
                   $isAnimatedDaftar2.eq(4).addClass('animate__animated animate__fadeInRight animate__delay-3s	3s');
                   $isAnimatedDaftar2.eq(5).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
                   $isAnimatedDaftar2.eq(6).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
+                }
+
+                 // third animation
+                 else if( ( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 ) && nextIndex == 6 ) {
+                  $isAnimatedDaftar3.eq(0).addClass('animate__animated animate__fadeIn animate__delay-1s	1s');
+                  $isAnimatedDaftar3.eq(1).addClass('animate__animated animate__fadeInLeft animate__delay-2s	2s');
+                  $isAnimatedDaftar3.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-2s	2s');
+                  $isAnimatedDaftar3.eq(3).addClass('animate__animated animate__fadeInRight animate__delay-3s	3s');
+                  $isAnimatedDaftar3.eq(4).addClass('animate__animated animate__fadeInRight animate__delay-3s	3s');
+                  $isAnimatedDaftar3.eq(5).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
+                  $isAnimatedDaftar3.eq(6).addClass('animate__animated animate__fadeIn animate__delay-4s	4s');
                 }
         },
           navigation: false,
