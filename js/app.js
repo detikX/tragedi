@@ -49,5 +49,8 @@ $(document).ready(function () {
 			'#6200ea'
 		]
 	});
+
+   
 	
 });
+
