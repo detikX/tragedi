@@ -128,8 +128,9 @@ main {
 }
 
 .back-white {
-    background: rgba($color: white, $alpha: .5);
+    background: rgba($color: white, $alpha: .8);
     padding: 16px;
+    border-radius: 16px;
 }
 
 .click-bola {
