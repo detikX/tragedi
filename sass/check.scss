@@ -1,0 +1,213 @@
+@font-face {
+    font-family: "chunkfive";
+    src: url('chunkfive.woff2');
+    src: local('chunkfive.woff2');
+    src: url('chunkfive.woff2') format('woff2');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noticia+Text&family=PT+Serif&family=Roboto&family=Yeseva+One&display=swap');
+
+section {
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+}
+
+main {
+    p,li,div{
+        font-family: 'Montserrat';
+    }
+}
+
+.font-heading {
+    font-family: 'chunkfive';
+}
+
+.paragraph {
+    .wrap-detik {
+        position: relative;
+        // height: 80vh;
+        padding: 16px;
+        z-index: 5;
+        // background: rgba($color: #fff, $alpha: .7);
+        // backdrop-filter: blur(8px);
+        .image {
+            width: 100%;
+            height: 100%;
+            img {
+                width:100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.topx {
+    position: relative;
+    z-index: 30;
+}
+
+.helpingx{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translate(-50%,-50%);
+    img {
+        width: 150%;
+        margin: 0 auto;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.fans {
+    .image {
+        position: relative;
+        z-index: 3;
+        width: 100vw;
+        height: 520px;
+        img {
+            width: 100%;
+            // height: 100%;
+            object-fit: cover;
+        }
+
+    }
+}
+
+.content {
+    .wrap-detik {
+        width: 960px;
+        @media screen and (max-width:766px) {
+            width: auto;
+        }
+    }
+    &__all {
+        display: -webkit-flex; /* Safari */
+        display: flex;
+        margin-bottom: 24px;
+        @media screen and (max-width:766px) {
+            display: block;
+        }
+        &.rightx {
+            .imagesx{
+                order: 2;
+                @media screen and (max-width:766px) {
+                    order: 1;
+                }
+            }    
+            .photo-card{
+                transform: rotate(3deg);
+            }
+        }
+        .imagesx {
+            width: 50%;
+            @media screen and (max-width:766px) {
+                width: 100%;
+            }
+            h3 {
+                // font-weight: bold;
+                font-size: 18px;
+                margin: 16px 0;
+                text-align: center;
+                color: black;
+                font-weight: 400;
+            }
+        }
+        .isix {
+            width: 50%;
+            @media screen and (max-width:766px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.back-white {
+    background: rgba($color: white, $alpha: .5);
+    padding: 16px;
+}
+
+.click-bola {
+    background: white;
+    position: absolute;
+    // top: 100%;
+    top: 0%;
+    left: 40%;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 3px 4px #bbb;
+    &:hover {
+        background: #ccc;
+    }
+}
+
+.wrap-detik {
+    width: 700px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    p {
+        font-family: 'Montserrat';
+    }
+  
+    @media screen and (max-width: 766px) {
+      width: auto;
+      margin: 0 8px;
+    }
+  }
+
+.bg-rumput {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    filter: blur(2px);
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.photo-card{
+    background: white;
+    padding: 16px;
+    width: 100%;
+    transform: rotate(-3deg);
+    margin: 16px 0;
+        img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+        }
+}
+
+.add-bg {
+    // background: rgba($color: white, $alpha: .7);
+    padding: 16px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.bolax {
+    position: relative;
+}
