@@ -13,7 +13,7 @@ section {
     z-index: 10;
 }
 .banner {
-    min-height: 75vh !important;
+    // min-height: 100vh !important;
 }
 main {
     p,li,div{
@@ -332,14 +332,18 @@ main {
   }
 
   .credit {
-    border-top: 5px solid #008f6b !important;
-    // background: #c3c4c5;
-    // background: #3a2c11;
-    // background: #30250e;
+    // border-top: 5px solid #008f6b !important;
+    display: none;
     text-align: center;
     margin: 0 auto;
-    // background: #f4faff;
-    display: block;
+    z-index: 99;
+    padding: 32px 0;
+    background: linear-gradient(to top,#127a2e,#63aa73);
+    // display: block;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background: radial-gradient(circle,#63aa73,#127a2e);
   
     .wrapings {
       display: block;
