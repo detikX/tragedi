@@ -430,7 +430,7 @@ main {
     }
   }
 
-  .box { position: relative; z-index: 99;float: right;animation:roll 3.5s linear infinite; max-width: 120px;height: 120px;
+  .box { position: relative; z-index: 99;float: right;animation:roll 3.5s linear infinite; max-width: 120px;height: 120px; transform: rotateX(90deg);
     .image {
         width: 80px;
         height: 80px;
