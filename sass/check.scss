@@ -429,3 +429,10 @@ main {
         object-fit: contain;
     }
   }
+
+  .box { position: relative; z-index: 99;float: right;animation:roll 4.5s infinite;}
+  @keyframes roll { 
+    0% {transform: rotate(-90deg);}
+    50% { transform: rotate(90deg);}
+    100% { transform: rotate(-90deg);}
+  }

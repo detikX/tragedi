@@ -17,6 +17,10 @@
                 <img src="img/check/rumput2.jpg" alt="">
             </div>
         </div>
+        <div class="box follow-scroll">
+            <!-- Third box (follows screen) -->
+            <img src="img/check/Bola.png" class="wow animate__animated animate__bounce animate__infinite infinite" data-wow-delay="0.5s" alt="" width="80" height="80">
+        </div>
         <section class="banner" style="z-index:99">
             <h2 class="text-center font-heading">Tragedi Sepak Bola di Indonesia</h2>
         </section>
@@ -54,6 +58,7 @@
                 <h2 class="text-center font-heading">
                     Berikut ini 10 tragedi yang menonjol <br> di dunia sepak bola Tanah Air:
                 </h2>
+                
                 <div class="content__all">
                     <div class="imagesx">
                         <div class="image photo-card">
@@ -353,42 +358,34 @@
             }, 2000);
         })
 
-        const pauseVar = "lalahe";
-        const playVar = "lalala";
-
-        const btns = document.querySelectorAll(".all");
-
-        function onChange(event) {
-        const buttonElement = event.currentTarget;
-
-        const isPlayButton = buttonElement.classList.contains(playVar);
-
-        if (isPlayButton) {
-            buttonElement.classList.remove(playVar);
-            buttonElement.classList.add(pauseVar);
-            $("#play-button").removeClass("animate__infinite");
-            $("#myAudio").get(0).play();
-        } else {
-            buttonElement.classList.remove(pauseVar);
-            buttonElement.classList.add(playVar);
-            $("#play-button").addClass("animate__infinite");
-            $("#myAudio").get(0).pause();
-        }
-        }
-
-        btns.forEach((btn) => {
-        btn.addEventListener("click", onChange);
-        });
-
-
         $(".yangkedua").click(()=>{
+            $('.yangkedua').hide();
             $(".content").fadeIn(3000);
             $(".credit").show();
-            $(this).hide();
             $('html, body').animate({
                 scrollTop: $(".content").offset().top
             }, 200);
         })
+
+            var element = $('.follow-scroll'),
+                originalY = element.offset().top;
+            
+            var topMargin = 20;
+            element.css('position', 'relative');
+            
+
+            $(window).on('scroll', function(event) {
+                var scrollTop = $(window).scrollTop();
+                
+                element.stop(false, false).animate({
+                    top: scrollTop < originalY
+                            ? 0
+                            : scrollTop - originalY + topMargin
+                }, 300);
+                // console.log('scrollTop',scrollTop);
+                // console.log('originalY',originalY);
+                // console.log('topMargin',topMargin);
+            });
     </script>
 </body>
 </html>
