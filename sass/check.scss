@@ -121,7 +121,11 @@ main {
         .imagesx {
             width: 50%;
             position: relative;
+            
             .arrownya {
+                @media screen and (max-width:766px) {
+                    display: none;
+                }
                 position: absolute;
                 right: -30%;
                 width: 200px;
