@@ -430,9 +430,9 @@ main {
     }
   }
 
-  .box { position: relative; z-index: 99;float: right;animation:roll 4.5s infinite;}
+  .box { position: relative; z-index: 99;float: right;animation:roll 8.5s infinite;}
   @keyframes roll { 
-    0% {transform: rotate(-90deg);}
-    50% { transform: rotate(90deg);}
-    100% { transform: rotate(-90deg);}
+    0% {right:0px; -webkit-transform: rotate(-90deg);}
+    50% {right:100px; -webkit-transform: rotate(90deg);}
+    100% {right:0px; -webkit-transform: rotate(-90deg);}
   }
