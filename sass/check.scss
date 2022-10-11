@@ -93,6 +93,7 @@ main {
         }
         p {
             font-size: 14px;
+            padding: 8px;
         }
     }
     &__all {
@@ -235,14 +236,17 @@ main {
     width: 100%;
     transform: rotate(-3deg);
     margin: 16px 0;
+    overflow: hidden;
     &:hover {
         // transform: rotate(0);
     }
         img {
             width: 100%;
             height: 100%;
-
             object-fit: contain;
+            &:hover{
+
+            }
         }
 }
 
@@ -315,14 +319,15 @@ main {
 
   .scroll-totop {
     position: fixed;
-    z-index: 999;
+    z-index: 60;
     right: 0;
     bottom: 42px;
     width: 42px;
     height: 42px;
+    cursor: pointer;
+    padding: 8px;
     background: white;
     border-radius: 50%;
-    padding: 8px;
     img {
         width: 100%;
         height: 100%;

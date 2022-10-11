@@ -347,14 +347,10 @@
         }
         }
 
-        // query selector all returns a list of nodes, therefore we need to iterate over it and attach an event listener to each button seperatly
         btns.forEach((btn) => {
         btn.addEventListener("click", onChange);
         });
 
-        // $(".yangkedua").hover(()=>{
-        //     $(this).removeClass('animate__shakeY')
-        // })
 
         $(".yangkedua").click(()=>{
             $(".content").fadeIn(3000)
