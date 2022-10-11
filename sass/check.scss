@@ -116,6 +116,9 @@ main {
             }    
             .photo-card{
                 transform: rotate(3deg);
+                &:hover {
+                    transform: rotate(0);
+                }
             }
         }
         .imagesx {
@@ -229,6 +232,9 @@ main {
     width: 100%;
     transform: rotate(-3deg);
     margin: 16px 0;
+    &:hover {
+        transform: rotate(0);
+    }
         img {
             width: 100%;
             height: 100%;
@@ -293,4 +299,13 @@ main {
     50% {
         top: 5px;
     }
+  }
+
+  .shadowx{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    
   }
