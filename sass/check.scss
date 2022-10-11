@@ -255,9 +255,13 @@ main {
             transition: .3s;
             object-fit: contain;
             &:hover {
-                transform: scale(1.25);
+                transform: scale(1.35);
             }
         }
+}
+
+.credit {
+    min-height: auto;
 }
 
 .add-bg {
