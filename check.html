@@ -30,7 +30,7 @@
                     <img src="img/check/Bola.png" alt="" class="wow animate__animated animate__shakeY animate__infinite infinite" data-wow-delay="0.5s">
                     
                     <div class="click-bola yangpertama">
-                        Tekan Saya
+                        Mulai Membaca
                     </div>
                 </div>
                 <div class="image duar">
@@ -384,6 +384,7 @@
         $(".yangkedua").click(()=>{
             $(".content").fadeIn(3000);
             $(".credit").show();
+            $(this).hide();
             $('html, body').animate({
                 scrollTop: $(".content").offset().top
             }, 200);
