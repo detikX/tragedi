@@ -32,6 +32,7 @@ section {
         text-shadow: 2px 2px black;
         width: 50%;
         text-align: right;
+       
         @media screen and (min-width:1440px) {
             transform: translate(-5%, -50%);
             font-size: 4.5rem;    
@@ -41,11 +42,11 @@ section {
         @media screen and (max-width:766px) {
             position: absolute;
             bottom: 5%;
-            right: 0;
-            font-size: 4rem;
+            right: 8px;
+            font-size: 3.5rem;
             color: #c9c9c9;
             text-shadow: 2px 2px #000;
-            width: 50%;
+            width: auto;
             text-align: right;
         }
         
@@ -158,6 +159,12 @@ main {
                     right: initial;
                     left: -32%;
                     bottom: -5%;
+                    @media screen and (max-width:766px) {
+                        right: initial;
+                            left: 0%;
+                            bottom: -10%;
+                            height: 80px;
+                    }
                     img {
                         transform: rotateY(180deg);
                         @media screen and (max-width:766px) {
@@ -202,7 +209,8 @@ main {
                 }
             }
             @media screen and (max-width:766px) {
-                width: 100%;
+                // width: 100%;
+                width: 85%;
             }
             h3 {
                 font-size: 18px;
@@ -386,6 +394,9 @@ main {
     left: 0;
     right: 0;
     width: 100%;
+    @media screen and (max-width:766px) {
+        bottom: -70px;
+    }
     
   }
 
