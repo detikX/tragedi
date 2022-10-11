@@ -120,7 +120,7 @@ main {
             .photo-card{
                 transform: rotate(3deg);
                 &:hover {
-                    transform: rotate(0);
+                    // transform: rotate(0);
                 }
             }
         }
@@ -236,7 +236,7 @@ main {
     transform: rotate(-3deg);
     margin: 16px 0;
     &:hover {
-        transform: rotate(0);
+        // transform: rotate(0);
     }
         img {
             width: 100%;
