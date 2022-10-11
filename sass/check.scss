@@ -330,4 +330,85 @@ main {
     width: 100%;
     
   }
+
+  .credit {
+    border-top: 5px solid #008f6b !important;
+    // background: #c3c4c5;
+    // background: #3a2c11;
+    // background: #30250e;
+    text-align: center;
+    margin: 0 auto;
+    // background: #f4faff;
+    display: block;
   
+    .wrapings {
+      display: block;
+      width: 50%;
+      margin: 0 auto 4px;
+      // position: relative;
+  
+      @media screen and (max-width:766px) {
+        width: 100%;
+      }
+    }
+  
+    // #c6c4c4
+    .name,
+    .jobdesc {
+      color: #2f2b2b;
+      display: inline-block;
+      vertical-align: top;
+  
+      @media screen and (max-width: 766px) {
+        font-size: 14px;
+      }
+    }
+  
+    .name {
+      text-align: left;
+      width: 45%;
+      font-size: 18px;
+      font-weight: bold;
+      vertical-align: middle;
+  
+      @media screen and (max-width:766px) {
+        font-size: 16px;
+      }
+    }
+  
+    .jobdesc {
+      text-align: right;
+      width: 45%;
+      font-size: 15px;
+      margin-right: 16px;
+      vertical-align: middle;
+  
+      @media screen and (max-width:766px) {
+        font-size: 14px;
+      }
+    }
+  }
+  
+  .scroll-totop {
+    position: fixed;
+    right: 32px;
+    bottom: 52px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border-radius: 50%;
+    background: white;
+    transition: .3s;
+    cursor: pointer;
+    @media screen and (max-width:766px) {
+        right: 0;
+    }
+    &:hover {
+        background: #82f076;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+  }
