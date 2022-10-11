@@ -17,7 +17,7 @@
                 <img src="img/check/rumput2.jpg" alt="">
             </div>
         </div>
-        <section class="banner">
+        <section class="banner" style="background-color: white; z-index:99">
             <h2 class="text-center font-heading">Tragedi Sepak Bola di Indonesia</h2>
         </section>
         <section class="paragraph">
@@ -25,7 +25,14 @@
                 <!-- <div class="helpingx">
                     <img src="img/baru/helping.png" alt="">
                 </div> -->
-                <div class="image bolax">
+                <audio id="myAudio">
+                    <source src="assets/bomb.wav"
+                        type="audio/ogg" />
+                    <source src="assets/bomb.wav"
+                        type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="image bolax lalala all" id="play-button">
                     <img src="img/check/Bola.png" alt="" class="wow animate__animated animate__shakeY animate__infinite infinite" data-wow-delay="0.5s">
                     <div class="click-bola yangpertama">
                         Tekan Saya
@@ -35,11 +42,13 @@
                     <img src="img/check/Bom.png" alt="">
                 </div>
                 <div class="topx back-white">
-                    <p>
-                        Selama dua dasawarsa ratusan orang tercatat menjadi korban perhelatan sepak bola di Indonesia. Sejumlah orang meregang nyawanya akibat kericuhan atau bentrokan antar penonton klub sepak bola (suporter), bentrokan penonton dengan aparat keamanan, aksi cegat (sweeping) antar suporter hingga kecelakaan lainnya.
-                    </p>
+                    <p class="firstletter">
+                        Sepak bola merupakan cabang olahraga paling favorit dan digemari di seluruh dunia, termasuk di Indonesia. Tak heran, bila stadion sepak bola selalu berjibun penontonnya. Lebih-lebih yang datang para pendukung fanatis (suporter) yang ingin melihat langsung klub sepak bola seyangannya berlaga. 
+                      </p>
+                      <p>Fanatisme penonton sepak bola (suporter) menjadi masalah tersendiri dalam dunia persepakbolaan. Kericuhan dan keributan, bahkan berujung kerusuhan yang menimbulkan korban jiwa kerap terjadi. Pemicunya saling ejek, protes dugaan kecurangan, konflik dengan petugas keamanan hingga soal kapasitas penonton di sebuah stadion yang dianggap tak layak. </p>
+                      <p>Dari data yang dihimpun detikX, selama dua dasawarsa atau dari 2002-2012 tercatat ada 203 korban penonton/suporter sepak bola di Indonesia tewas. Mereka ini menjadi korban dalam kericuhan di dalam maupun di luar stadion. </p>
                     <div class="click-bola yangkedua position-relative">
-                        Lanjut Baca
+                        Yuk, Lanjut Baca
                     </div>
                 </div>
             </div>
@@ -216,6 +225,45 @@
                 $(".duar").fadeOut()
                 $(".topx").fadeIn()
             }, 2000);
+        })
+
+        const pauseVar = "lalahe";
+        const playVar = "lalala";
+
+        const btns = document.querySelectorAll(".all");
+
+        function onChange(event) {
+        const buttonElement = event.currentTarget;
+
+        const isPlayButton = buttonElement.classList.contains(playVar);
+
+        if (isPlayButton) {
+            buttonElement.classList.remove(playVar);
+            buttonElement.classList.add(pauseVar);
+            $("#play-button").removeClass("animate__infinite");
+            $("#myAudio").get(0).play();
+        } else {
+            buttonElement.classList.remove(pauseVar);
+            buttonElement.classList.add(playVar);
+            $("#play-button").addClass("animate__infinite");
+            $("#myAudio").get(0).pause();
+        }
+        }
+
+        // query selector all returns a list of nodes, therefore we need to iterate over it and attach an event listener to each button seperatly
+        btns.forEach((btn) => {
+        btn.addEventListener("click", onChange);
+        });
+
+        // $(".yangkedua").hover(()=>{
+        //     $(this).removeClass('animate__shakeY')
+        // })
+
+        $(".yangkedua").click(()=>{
+            $(".content").fadeIn(3000)
+            $('html, body').animate({
+                scrollTop: $(".content").offset().top
+            }, 200);
         })
     </script>
 </body>

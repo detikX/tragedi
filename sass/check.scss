@@ -12,7 +12,9 @@ section {
     position: relative;
     z-index: 10;
 }
-
+.banner {
+    min-height: 75vh !important;
+}
 main {
     p,li,div{
         font-family: 'Montserrat';
@@ -46,6 +48,9 @@ main {
 .topx {
     position: relative;
     z-index: 30;
+    .click-bola {
+        // margin: initial;
+    }
 }
 
 .helpingx{
@@ -80,6 +85,7 @@ main {
 }
 
 .content {
+    display: none;
     .wrap-detik {
         width: 960px;
         @media screen and (max-width:766px) {
@@ -110,12 +116,11 @@ main {
                 width: 100%;
             }
             h3 {
-                // font-weight: bold;
                 font-size: 18px;
                 margin: 16px 0;
                 text-align: center;
-                color: black;
-                font-weight: 400;
+                font-weight: 700;
+                color: #0a6c00;
             }
         }
         .isix {
@@ -141,7 +146,7 @@ main {
     left: 40%;
     text-align: center;
     width: fit-content;
-    margin: 0 auto;
+    // margin: 0 auto;
     padding: 8px;
     cursor: pointer;
     border-radius: 8px;
@@ -212,3 +217,20 @@ main {
 .bolax {
     position: relative;
 }
+
+
+.yangkedua{
+    animation: MoveUpDownsx .3s linear infinite;
+    // margin-top: 0;
+    &:hover {
+        animation: initial;
+    }
+}
+@keyframes MoveUpDownsx {
+    0%, 100% {
+      top: 0;
+    }
+    50% {
+        top: 5px;
+    }
+  }
