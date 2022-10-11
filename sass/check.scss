@@ -12,6 +12,13 @@ section {
     position: relative;
     z-index: 10;
 }
+.paragraph {
+    padding: 32px 0;
+}
+
+.ball{
+    min-height: auto;
+}
 .banner {
     height: 100vh !important;
     width: 100%;
@@ -30,6 +37,16 @@ section {
             font-size: 4.5rem;    
             bottom: 0;
             width: 40%;
+        }
+        @media screen and (max-width:766px) {
+            position: absolute;
+            bottom: 5%;
+            right: 0;
+            font-size: 4rem;
+            color: #c9c9c9;
+            text-shadow: 2px 2px #000;
+            width: 50%;
+            text-align: right;
         }
         
     }
