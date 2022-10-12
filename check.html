@@ -32,17 +32,19 @@
                 <!-- <div class="helpingx">
                     <img src="img/baru/helping.png" alt="">
                 </div> -->
-                <div class="image bolax">
+                <!-- <div class="image bolax">
                     <img src="img/check/Shadow.png" alt="" title="" class="shadowx">
                     <img src="img/check/Bola.png" alt="" class="wow animate__animated animate__shakeY animate__infinite infinite" data-wow-delay="0.5s">
                     
                     <div class="click-bola yangpertama">
                         Mulai Membaca
                     </div>
-                </div>
-                <div class="image duar">
+                </div> -->
+                <!-- <div class="image duar">
                     <img src="img/check/Bom.png" alt="">
-                </div>
+                </div> -->
+                <!-- <button onclick="typeWriter()">Click me</button>
+                <div id="demo"></div> -->
                 <div class="topx back-white">
                     <p class="firstletter">
                         Sepak bola merupakan cabang olahraga paling favorit dan digemari di seluruh dunia, termasuk di Indonesia. Tak heran, bila stadion sepak bola selalu berjibun penontonnya. Lebih-lebih yang datang para pendukung fanatis (suporter) yang ingin melihat langsung klub sepak bola seyangannya berlaga. 
@@ -366,10 +368,12 @@
         })
 
         $(".scroll-totop").click(()=>{
-            $('html, body').animate({scrollTop: '0px'}, 300);
+            $('html, body').animate({
+                scrollTop: $(".content").offset().top
+            }, 300);
         })
         
-        $(".topx").hide()
+        // $(".topx").hide()
         $(".duar").hide()
         $(".yangpertama").click(function(){
             $(".bolax").hide();
@@ -409,6 +413,18 @@
             // console.log('topMargin',topMargin);
         });
 
+        var i = 0;
+        var txt = 'Sepak bola merupakan cabang olahraga paling favorit dan digemari di seluruh dunia, termasuk di Indonesia. Tak heran, bila stadion sepak bola selalu berjibun penontonnya. Lebih-lebih yang datang para pendukung fanatis (suporter) yang ingin melihat langsung klub sepak bola seyangannya berlaga.Sepak bola merupakan cabang olahraga paling favorit dan digemari di seluruh dunia, termasuk di Indonesia. Tak heran, bila stadion sepak bola selalu berjibun penontonnya. Lebih-lebih yang datang para pendukung fanatis (suporter) yang ingin melihat langsung klub sepak bola seyangannya berlaga. <br/> lala';
+        var speed = 30;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                // $("#demo").html(txt.charAt(i))
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
 
         //gsap
         
