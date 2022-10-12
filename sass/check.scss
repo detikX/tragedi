@@ -8,8 +8,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noticia+Text&family=PT+Serif&family=Roboto&family=Yeseva+One&display=swap');
 
 section {
-    min-height: 100vh;
+    // min-height: 100vh;
     position: relative;
+    padding: 32px 0;
     z-index: 10;
 }
 .paragraph {
@@ -22,6 +23,7 @@ section {
 .banner {
     height: 100vh !important;
     width: 100%;
+    padding: 0;
     position: relative;
     &__title {
         position: absolute;
