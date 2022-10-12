@@ -470,31 +470,31 @@ main {
       vertical-align: top;
   
       @media screen and (max-width: 766px) {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   
     .name {
       text-align: left;
       width: 45%;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: bold;
       vertical-align: middle;
   
       @media screen and (max-width:766px) {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
   
     .jobdesc {
       text-align: right;
       width: 45%;
-      font-size: 15px;
+      font-size: 14px;
       margin-right: 16px;
       vertical-align: middle;
   
       @media screen and (max-width:766px) {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }
