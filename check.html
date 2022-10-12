@@ -23,6 +23,10 @@
             <div class="banner__image">
                 <img src="img/check/ribut.webp" alt="" title="" loading="lazy">
             </div>
+            <div class="scroll-kebawah">
+                <div class="imagesd"><img src="img/check/up-arrow.png" alt=""></div>
+                <div class="color-white"><i>Scroll</i> ke bawah</div>
+            </div>
         </section>
         <section class="paragraph">
             <div class="box follow-scroll">
@@ -416,18 +420,11 @@
             // console.log('topMargin',topMargin);
         });
 
-        var i = 0;
-        var txt = 'Sepak bola merupakan cabang olahraga paling favorit dan digemari di seluruh dunia, termasuk di Indonesia. Tak heran, bila stadion sepak bola selalu berjibun penontonnya. Lebih-lebih yang datang para pendukung fanatis (suporter) yang ingin melihat langsung klub sepak bola seyangannya berlaga.Sepak bola merupakan cabang olahraga paling favorit dan digemari di seluruh dunia, termasuk di Indonesia. Tak heran, bila stadion sepak bola selalu berjibun penontonnya. Lebih-lebih yang datang para pendukung fanatis (suporter) yang ingin melihat langsung klub sepak bola seyangannya berlaga.';
-        var speed = 30;
-
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("demo").innerHTML += txt.charAt(i);
-                // $("#demo").html(txt.charAt(i))
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-        }
+        $(".scroll-kebawah").click(()=>{
+            $('html, body').animate({
+                scrollTop: $(".topx").offset().top
+            }, 200);
+        })
 
         //gsap
         
