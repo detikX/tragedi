@@ -25,12 +25,15 @@ section {
     width: 100%;
     padding: 0;
     position: relative;
+    @media screen and (max-width:766px) {
+        height: 70vh !important;
+    }
     &__title {
         position: absolute;
         bottom: 5%;
         right: 0;
         font-size: 4rem;
-        color: #c9c9c9;
+        color: #66b555;
         text-shadow: 2px 2px black;
         width: 50%;
         text-align: right;
@@ -43,10 +46,11 @@ section {
         }
         @media screen and (max-width:766px) {
             position: absolute;
-            bottom: 5%;
+            bottom: 16%;
+            line-height: 55px;
             right: 8px;
             font-size: 3.5rem;
-            color: #c9c9c9;
+            color: #66b555;
             text-shadow: 2px 2px #000;
             width: auto;
             text-align: right;
@@ -512,6 +516,9 @@ main {
     cursor: pointer;
     @media screen and (max-width:766px) {
         right: 0;
+        width: 32px;
+        height: 32px;
+        padding: 6px 4px;
     }
     &:hover {
         background: #82f076;
@@ -567,6 +574,17 @@ main {
         cursor: pointer;
         padding: 8px;
         border-radius: 50%;
+        @media screen and (max-width:766px) {
+            animation: MoveUpDown 1s linear infinite;
+            width: 32px;
+            height: 32px;
+            transform: translate(-50%, -50%);
+            transform: rotate(180deg);
+            background: #fff;
+            cursor: pointer;
+            padding: 4px 4px;
+            border-radius: 50%;
+        }
     }
     img {
         width: 100%;
